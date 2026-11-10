@@ -7,8 +7,12 @@ A[R] + A[P] > A[Q].
 def solution(A):
   A.sort()
   count = 0
+  
   for i in range(len(A) - 2):
     k = i + 2
     for j in range(i + 1, len(A) - 1):
       while k < len(A) and A[i] + A[j] > A[k]:
-        
+        k += 1
+
+      count += k - j - i
+    return count
