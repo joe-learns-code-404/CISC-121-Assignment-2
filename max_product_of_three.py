@@ -1,4 +1,5 @@
 def solution(A):
+    # empty array to store each product
     products = []
 
     for x in range(len(A)):
