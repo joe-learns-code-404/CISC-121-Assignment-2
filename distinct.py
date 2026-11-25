@@ -6,11 +6,11 @@ def solution(A):
     # index of array value we searching (gets changed)
     current = 0
 
-    for x in range(len(A)): # 
-        if A[current] != A[x]:
-            count += 1
+    for x in range(len(A)): # look through array
+        if A[current] != A[x]: # another distinct variable is found
+            count += 1 # count value goes up
             current = x
-    if len(A) == 0:
+    if len(A) == 0: # if array is empty
         return 0
     else:
         return count
